@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bartender</title>
-</head>
-<body>
-    <img src="../Public/Images/Cocktail Juice.jfif">
-</body>
+<html>
+    <%- include("partials/header.ejs") %>
+
+    <body>
+        <%= locals.DrinkType.data.drinks[0].strAlcoholic %>
+        <br>
+        <img src="../Public/Images/Cocktail Juice.jpeg" alt="A picture for a Cocktail with a lemon on the glass">
+    </body>
+    
+    <%- include("partials/footer.ejs") %>
 </html>
+
