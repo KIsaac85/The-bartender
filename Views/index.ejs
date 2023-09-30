@@ -2,9 +2,22 @@
     <%- include("partials/header.ejs") %>
 
     <body>
-        <%= locals.DrinkType.data.drinks[0].strAlcoholic %>
+
+        
+        <div>
+            <h1>Choose Your Own Cocktail</h1>
+            <form action="/cocktail" method="POST" class="buttons">
+                <button type="submit" id="wine"value="wine" name="choice"></button>
+                <button type="submit" id="gin" value="gin" name="choice" ></button>
+                <button type="submit" id="whiskey" value="whiskey" name="choice"></button>
+                <button type="submit" id="tequila" value="tequila" name="choice"></button>
+                <button type="submit" id="vodka" value="vodka" name="choice"></button>
+              </form>
+        </div>
         <br>
-        <img src="../Public/Images/Cocktail Juice.jpeg" alt="A picture for a Cocktail with a lemon on the glass">
+        <% if (locals.DrinkType) {%>
+            <%= DrinkType.strDrink %>
+        <%  } %>
     </body>
     
     <%- include("partials/footer.ejs") %>
