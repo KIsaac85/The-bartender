@@ -27,32 +27,9 @@ app.post("/cocktail", async (req, res) =>
 {
     try 
     {
-    switch (req.body.choice) {
-      case "wine":
-        result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
-        
-        break;
-         case "gin":
-         result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
-         
-         break;
-         case "whiskey":
-           result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
-           
-           break;
-          case "tequila":
-           result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
-           
-           break;
-           case "vodka":
-           result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
-           
-           break;
-           
-    }
-    data=result.data.drinks[Math.floor(Math.random()*result.data.drinks.length)]
-    res.redirect("/");
-
+      result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
+      data=result.data.drinks[Math.floor(Math.random()*result.data.drinks.length)]
+      res.redirect("/");
     } 
     catch (error) 
     {
