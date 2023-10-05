@@ -5,33 +5,9 @@ body{
 div{
     background-color: white;
 }
-#gin{
-    background-image: url("../images/gin-img.jpg");
-    background-size:100%;
-    height: 200px;
-    width: 200px;
-}
-#vodka{
-    background-image: url("../images/vodka.jpg");
-    background-size:100%;
-    height: 200px;
-    width: 200px;
-}
-#wine{
-    background-image: url("../images/wine.jpg");
-    background-size:100%;
-    height: 200px;
-    width: 200px;
-}
-#whiskey{
-    background-image: url("../images/whiskey.jpg");
-    background-size:100%;
-    height: 200px;
-    width: 200px;
-}
-#tequila{
-    background-image: url("../images/Tequila.jpg");
-    background-size:100%;
-    height: 200px;
-    width: 200px;
+button{
+    color: #fefae0;
+    width: 110px;
+    background-color: #606c38;
+    border-radius: 10%;
 }
