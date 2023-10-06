@@ -1,32 +1,41 @@
 <html>
     <%- include("partials/header.ejs") %>
 
-    <body>
+    <body >
 
-        
-        <div>
+
+
+
+        <div id="upperContainer">
+        <div class="lowerContainer" >
             <h1>Choose Your Own Cocktail</h1>
-            <form action="/cocktail" method="POST" class="buttons">
+        </div>
+        <div class="lowerContainer">
+            
+            <form action="/cocktail" method="POST"  class="buttons">
                 <button type="submit" id="wine"value="wine" name="choice">🍷 WINE</button>
                 <button type="submit" id="gin" value="gin" name="choice" >🍸 GIN</button>
-                <button type="submit" id="whiskey" value="whiskey" name="choice">🥃 whiskey</button>
+                <button type="submit" id="whiskey" value="whiskey" name="choice">🥃 WHISKEY</button>
                 <button type="submit" id="beer" value="beer" name="choice">🍺 BEER</button>
-                <button type="submit" id="champagne" value="champagne" name="choice">🥂 champagne</button>
-                <button type="submit" id="rum" value="rum" name="choice">🍹 rum</button>
+                <button type="submit" id="champagne" value="champagne" name="choice">🥂 CHAMPAGNE</button>
+                <button type="submit" id="rum" value="rum" name="choice">🍹 RUM</button>
               </form>
 
               <% if (locals.DrinkType) {%>
-                <%= DrinkType.strDrink %>
+                <h2><%= DrinkType.strDrink %></h2>
                 <h4>Ingredients</h4>
-                <% for (let index = 0; index < 15; index++) {
-                    if ( DrinkType["strIngredient"+index] !== null) { %>
-                        <%-  DrinkType["strIngredient"+index]  %>
+                <% for (let index = 1; index <= 15; index++) 
+                {
+                    if ( DrinkType["strIngredient"+index] !== null) 
+                     { %>
+                        <%-  DrinkType["strIngredient"+index]   %>
                         <br>
-                        <% } %>
-                    <% } %>
+                  <% } %>
+                  
+             <% } %>
             <%} %>
         </div>
-
+</div>
     </body>
     
     <%- include("partials/footer.ejs") %>

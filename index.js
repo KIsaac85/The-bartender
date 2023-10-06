@@ -22,13 +22,25 @@ app.get("/", async (req, res) =>
     console.log(error.response.data);
     }
 });
-
+app.get("/home", async (req, res) => 
+{
+    try 
+    {
+      data=null;
+      res.render("index.ejs",{DrinkType: data});
+    } 
+    catch (error) 
+    {
+    console.log(error.response.data);
+    }
+});
 app.post("/cocktail", async (req, res) => 
 {
     try 
     {
       result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${req.body.choice}`);
       data=result.data.drinks[Math.floor(Math.random()*result.data.drinks.length)]
+      
       res.redirect("/");
     } 
     catch (error) 
