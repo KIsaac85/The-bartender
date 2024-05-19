@@ -1,5 +1,4 @@
 
-
 @media (min-width: 710px){
     div{
         min-width: 710px;
@@ -34,7 +33,7 @@
 body{
     min-width: 375px;
     color:#283618;
-    font-family: 'Roboto', sans-serif,cursive;
+    font-family: Roboto, sans-serif,cursive;
     display: flex;
     text-align: center;
     align-items: center;
@@ -59,3 +58,19 @@ button:active {
     box-shadow: 2px 2px black;
     transform: translateY(4px);
   }
+  .navContainer{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    
+  }
+  a, p{
+    background-color:#fefae0;
+    text-decoration: none;
+    color: black;
+  }
+ 
+  footer {
+    position: absolute;
+    bottom: 0;
+}

@@ -9,7 +9,9 @@ let result;
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.get("/portofolio", (req,res)=>{
+  res.redirect("//www.youtube.com");
+})
 
 app.get("/", async (req, res) => 
 {
