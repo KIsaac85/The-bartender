@@ -4,7 +4,8 @@ import bodyParser from "body-parser";
 import path from "path";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 // Set the correct views directory
 app.set("views", path.join(process.cwd(), "views"));
