@@ -1,16 +1,22 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import path from "path";
 
 const app = express();
 const port = 3000;
+
+// Set the correct views directory
+app.set("views", path.join(process.cwd(), "views"));
+app.set("view engine", "ejs");
+
 let data;
 let result;
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/portofolio", (req,res)=>{
-  res.redirect("//www.youtube.com");
+  res.redirect("//https://kisaac85.github.io/");
 })
 
 app.get("/", async (req, res) => 
