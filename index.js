@@ -2,13 +2,17 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 import path from "path";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
+// Simulate __dirname
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 // Set the correct views directory
-app.set("views", path.join(process.cwd(), "views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 let data;
