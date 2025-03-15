@@ -29,7 +29,8 @@ app.get("/", async (req, res) =>
 {
     try 
     {
-      res.render("index",{DrinkType: data});
+      res.send({msg:"hello"})
+      //res.render("index",{DrinkType: data});
     } 
     catch (error) 
     {
