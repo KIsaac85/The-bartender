@@ -40,7 +40,7 @@ app.get("/home", async (req, res) =>
     try 
     {
       data=null;
-      res.render("index.ejs",{DrinkType: data});
+      res.render("index",{DrinkType: data});
     } 
     catch (error) 
     {
