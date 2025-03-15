@@ -28,7 +28,7 @@ app.get("/", async (req, res) =>
 {
     try 
     {
-      res.render("index.ejs",{DrinkType: data});
+      res.render("index",{DrinkType: data});
     } 
     catch (error) 
     {
